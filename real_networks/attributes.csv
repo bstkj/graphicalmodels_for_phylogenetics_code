@@ -1,0 +1,12 @@
+"name","maxclustersize","ntips","nhybrids","Network","level","treechild"
+"bergstrom_2020.phy",3,7,3,"empirical",3,TRUE
+"hajdinjak_2021.phy",4,12,8,"empirical",8,FALSE
+"lazaridis_2014.phy",4,7,4,"empirical",4,FALSE
+"librado_2021.phy",3,10,3,"empirical",3,FALSE
+"lipson_2020b.phy",7,12,12,"empirical",12,FALSE
+"muller_2022.phy",54,40,361,"empirical",358,FALSE
+"neureiter_2022.phy",6,39,32,"empirical",32,FALSE
+"nielsen_2023.phy",4,11,4,"empirical",4,TRUE
+"sikora_2019.phy",5,13,6,"empirical",6,FALSE
+"sun_2023.phy",5,10,6,"empirical",6,FALSE
+"wang_2021.phy",4,12,8,"empirical",8,FALSE
