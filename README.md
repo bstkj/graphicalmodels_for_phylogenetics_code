@@ -41,13 +41,13 @@ README with more details.
 
 ## Reproducing the same Julia environment
 
-- The `Project.toml` and `Manifest.toml` files are provided so that the exact
-package environment used to perform the Julia-related analyses can be
-instantiated.
+- The `Project.toml` is provided so that the exact package environment used to
+perform the Julia-related analyses can be instantiated.
 - To reproduce the environment:
     1. Open the Julia REPL within `graphicalmodels_for_phylogenetics_code`
-    (which contains `Project.toml` and `Manifest.toml`)
-    2. Enter the Pkg REPL and run `activate .`
+    (which contains `Project.toml`)
+    2. Enter the Pkg REPL and run `activate .` then `instantiate`
 ```
 (@v1.10) pkg> activate .
+(graphicalmodels_for_phyloge...) pkg> instantiate
 ```
