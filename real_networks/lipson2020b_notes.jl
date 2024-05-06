@@ -9,12 +9,12 @@ the drift edge) and inheritance weight (from the admixture edge))
 (2) Any resulting length-0 edges were assigned length 1 (the minimum positive
 edge length from the original graph)
 
-The resulting graph was saved to the examples_networks/ folder.
+The resulting graph was saved to the real_networks/ folder.
 =#
 
 ## some checks
 using PhyloNetworks
-net = readTopology("example_networks/lipson_2020b.phy")
+net = readTopology("real_networks/lipson_2020b.phy")
 # 57 edges, 46 nodes: 12 tips, 12 hybrid nodes, 22 internal tree nodes
 (e.length for e in net.edge) |> extrema # (1.0, 68.0), no length-0 edges
 (e.gamma for e in net.edge if e.hybrid) |> extrema # (0.01, 0.99)

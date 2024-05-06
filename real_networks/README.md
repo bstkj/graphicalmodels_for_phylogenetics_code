@@ -2,7 +2,8 @@
 
 ## Data
 - Networks from real data, coded in extended newick format.
-The `Source` column indicates which figure the network was coded from.
+The `Source` column indicates which figure of which study the network was coded
+from.
 
 || Network | Source |
 | --- | --- | --- |

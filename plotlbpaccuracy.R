@@ -209,7 +209,7 @@ dev.off()
 
 ################################################################################
 ## Figure S3: cluster sizes for clique tree and join-graph structuring
-df_clustersizes <- read.table("lbpaccuracy_clustersizes.csv", header=T, sep=",")
+df_clustersizes <- read.table("lbp_accuracy/lbpaccuracy_clustersizes.csv", header=T, sep=",")
 clustersize_boxplots <- function(){
   col1 <- rgb(0,0,255,alpha=120,max=255); col2 <- rgb(238,130,238,alpha=120,max=255)
   boxplot(clustersize ~ grp, data=df_clustersizes, range=0, log="x",

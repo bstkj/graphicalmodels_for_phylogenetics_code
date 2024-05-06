@@ -20,6 +20,7 @@ README with more details.
 
 - `BDH_networks/`:
     - scripts to sample simulated networks and save their attributes
+    - simulated networks
     - saved network attributes
 - `real_networks/`:
     - real networks and scripts to save their attributes
