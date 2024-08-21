@@ -32,3 +32,27 @@ df <- df %>% filter(maxclustersize > 2) # from 3770 networks to 2509 networks
 
 write.csv(df,file="BDH_networks/attributes.csv",row.names=F)
 """
+
+# check maximum blob level for networks with h > 10
+netids = findall(df.maxclustersize .> 2) # retain networks with non-trivial blobs
+maxblobh_h_vec = Tuple{Int,Int}[]
+for i in netids
+    net = all_nets[i]
+    if net.numHybrids > 10
+        blobs = biconnectedComponents(net, true)
+        maxblobh = 0
+        for blob in blobs
+            blobh = 0
+            for e in blob # loop through edges in blob
+                e.hybrid && (blobh += 1) # count no. of hybrid edges
+            end
+            # divide by 2 to get no. of hybrid nodes (assumes hybrids have 2 parents)
+            (blobh > maxblobh) && (maxblobh = Int(blobh/2))
+        end
+        push!(maxblobh_h_vec, (maxblobh, net.numHybrids))
+    end
+end
+diff = map(tup -> tup[2]-tup[1], maxblobh_h_vec)
+length(diff) # 505 simulated networks with h > 10
+sum(diff .≤ 2) # 500 out of these 505 have (no. of hybrids - max blob level) ≤ 2
+maximum(diff) # (no. of hybrids - max blob level) ≤ 8

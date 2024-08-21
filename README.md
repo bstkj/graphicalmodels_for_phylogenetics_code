@@ -9,9 +9,9 @@ This repository contains code to reproduce simulations and figures in:
 
 There are 3 top-level scripts, which plot and save (some) figures that appear in
 the main text or supplementary materials:
-- `plotlazaridisnet.jl`: Fig 4(a)
-- `plotpredicttreewidth.R`: Fig 6
-- `plotlbpaccuracy.R`: Fig 7, S2, S3
+- `plotlazaridisnet.jl`: Fig 3(a)
+- `plotpredicttreewidth.R`: Fig 5
+- `plotlbpaccuracy.R`: Fig 6, S3, S4
 
 These respectively access data from `BDH_networks/`, `real_networks/` and
 `lbp_accuracy/`, and save their output to `figures/`. The contents of these 4

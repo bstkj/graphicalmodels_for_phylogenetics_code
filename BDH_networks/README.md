@@ -11,4 +11,5 @@ network treechild)
 
 ## Scripts
 - `samplenetworks.R`: creates `all_nets_nsample_10.newick`
-- `attributes.jl`: creates `attributes.csv`
+- `attributes.jl`: creates `attributes.csv`, calculates the difference between
+no. of hybrids and max blob level for all networks with more than 10 hybrids

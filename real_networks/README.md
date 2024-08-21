@@ -29,4 +29,5 @@ treechild)
 positive edge length
 - `muller2022_nexus2newick.jl`: converts source network to `muller_2022.phy` by
 estimating inheritance weights from recombination breakpoints
-- `attributes.jl`: creates `attributes.csv`
+- `attributes.jl`: creates `attributes.csv`, calculates the difference between
+no. of hybrids and max blob level for all networks with more than 10 hybrids
