@@ -1,11 +1,11 @@
-# Reproduce "Accuracy of loopy BP" figures in main text (Fig 7) and supplementary
-# material (Fig S2, S3), which compare clique tree and cluster graph estimates
+# Reproduce "Accuracy of loopy BP" figures in main text (Fig 6) and supplementary
+# material (Fig S3, S4), which compare clique tree and cluster graph estimates
 # for 2 networks
 
 library(scales)
 library(SiPhyNetwork)
 ################################################################################
-## Figure 7: lbp accuracy for regularization algorithm R1 vs R2
+## Figure 6: lbp accuracy for regularization algorithm R1 vs R2
 muller_net <- read.net("real_networks/muller_2022.phy")
 getNetworkLevel(muller_net) # 358
 # join-graph structuring loopy BP estimates using regularization algorithms R1 and R2
@@ -69,7 +69,7 @@ combined_plot <- function(){
   mtext(text="Factored energy", side=3, outer=T, line=-16.8, at=0.83, cex=1.1) # y-axis label top-right
   mtext(text="Factored energy", side=3, outer=T, line=-38, at=0.83, cex=1.1) # y-axis label bottom-right
   mtext(text=expression("Lipson et al. (2020b): " *
-                          list(italic(n)==12, "\u2113"==12, italic(h)==12, k==6, k^symbol("*")==3)),
+                          list(italic(n)==12, "\u2113"==12, italic(h)==12, k==7, k^symbol("*")==3)),
         side=3, outer=T, line=-2, at=0, adj=0, cex=1.1) # top row label
   mtext(text=expression("Müller et al. (2022): " *
                           list(italic(n)==40, "\u2113"==358, italic(h)==361, k==54, k^symbol("*")==10)),
@@ -81,7 +81,7 @@ combined_plot()
 dev.off()
 
 ################################################################################
-## Figure S2: lbp accuracy for join-graph structuring vs factor graph
+## Figure S3: lbp accuracy for join-graph structuring vs factor graph
 # applies modulus transformation with transformation exponent set to 0
 # (https://www.jstor.org/stable/2986305)
 logmodulus_trans <- function(x) {
@@ -208,7 +208,7 @@ combined_plot_fg()
 dev.off()
 
 ################################################################################
-## Figure S3: cluster sizes for clique tree and join-graph structuring
+## Figure S4: cluster sizes for clique tree and join-graph structuring
 df_clustersizes <- read.table("lbp_accuracy/lbpaccuracy_clustersizes.csv", header=T, sep=",")
 clustersize_boxplots <- function(){
   col1 <- rgb(0,0,255,alpha=120,max=255); col2 <- rgb(238,130,238,alpha=120,max=255)

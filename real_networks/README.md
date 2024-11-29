@@ -25,7 +25,7 @@ treechild)
 
 ## Scripts
 - `lipson2020b_notes.jl`: documents how source network was converted to
-`lipson_202b.phy` by suppressing degree-2 nodes and assigning length-0 edges a
+`lipson_2020b.phy` by suppressing degree-2 nodes and assigning length-0 edges a
 positive edge length
 - `muller2022_nexus2newick.jl`: converts source network to `muller_2022.phy` by
 estimating inheritance weights from recombination breakpoints

@@ -1,4 +1,4 @@
-# Reproduce data for "Accuracy of loopy BP" Fig 7, S2, S3
+# Reproduce data for "Accuracy of loopy BP" Fig 6, S3, S4
 
 using BenchmarkTools
 using CSV, DataFrames
